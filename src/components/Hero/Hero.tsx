@@ -4,8 +4,8 @@ const Hero = () => {
   return (
     <>
       <main className="bg-white dark:bg-gray-950 dark:text-white duration-300">
-        <div className="container min-h-[620px] flwx mt-10 sm:mt-0">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 place-items-center">
+        <div className="container min-h-[620px] flex mt-10 sm:mt-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 place-items-center">
             {/* image content section */}
             <div className="order-1 sm:order-2 relative">
               <img src={heroImg} alt="hero section image" />

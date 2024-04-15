@@ -4,7 +4,7 @@ import { BiSolidSun, BiSolidMoon } from "react-icons/bi";
 const DarkMode = () => {
   const themeStorage = localStorage.getItem("theme");
   const element = document.documentElement;
-  const [theme, setTheme] = useState(themeStorage ? themeStorage : "light");
+  const [theme, setTheme] = useState(themeStorage ? themeStorage : "dark");
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
