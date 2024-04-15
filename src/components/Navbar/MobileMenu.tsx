@@ -3,9 +3,10 @@ import { MenuLinks } from "./Navbar";
 
 type Props = {
   showMenu: boolean;
+  onClick: React.MouseEventHandler;
 };
 
-const MobileMenu = ({ showMenu }: Props) => {
+const MobileMenu = ({ showMenu, onClick }: Props) => {
   console.log(showMenu);
 
   return (
@@ -28,7 +29,7 @@ const MobileMenu = ({ showMenu }: Props) => {
         <nav className="mt-12">
           <ul className="space-y-4 text-xl">
             {MenuLinks.map((data) => (
-              <li key={data.name}>
+              <li onClick={onClick} key={data.name}>
                 <a href={data.link} className="mb-5 inline-block">
                   {data.name}
                 </a>

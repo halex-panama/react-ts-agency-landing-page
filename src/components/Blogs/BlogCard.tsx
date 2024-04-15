@@ -1,16 +1,25 @@
 import { FaArrowRight } from "react-icons/fa";
 
-type Props = { image: string; title: string; description: string };
+type Props = {
+  image: string;
+  title: string;
+  description: string;
+  delay: string;
+};
 
-const BlogCard = ({ image, title, description }: Props) => {
+const BlogCard = ({ image, title, description, delay }: Props) => {
   return (
     <>
-      <div className=" dark:text-white group">
+      <div
+        data-aos="fade-up"
+        data-aos-delay={delay}
+        className="dark:text-white group"
+      >
         <div className="overflow-hidden">
           <img
             src={image}
             alt="blog image"
-            className="mx-auto h-[420px] w-full object-cover group-hover:scale-105 duration-300"
+            className="mx-auto h-[320px] w-full object-cover group-hover:scale-105 duration-300"
           />
         </div>
         <div className="space-y-2 p-4 ml-6 bg-white dark:bg-slate-950 -translate-y-16">

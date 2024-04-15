@@ -24,17 +24,26 @@ const testimonialData = [
 const Testimonials = () => {
   var settings = {
     dots: true,
+    arrows: false,
     infinite: true,
-    speed: 500,
+    speed: 600,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: false,
+    autoplaySpeed: 3000,
+    cssEase: "linear",
+    pauseOnHover: true,
+    pauseOnFocus: true,
   };
   return (
     <>
-      <div className="py-10">
+      <section id="testimonials" className="py-10">
         <div className="container">
           {/* testimonials section  */}
-          <div className="grid grid-cols-1 max-w-screen-xl mx-auto gap-6">
+          <div
+            data-aos="fade-up"
+            className="grid grid-cols-1 max-w-screen-xl mx-auto gap-6"
+          >
             <Slider {...settings}>
               {testimonialData.map((testimoni) => (
                 <div key={testimoni.id} className="my-6">
@@ -60,7 +69,7 @@ const Testimonials = () => {
             </Slider>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

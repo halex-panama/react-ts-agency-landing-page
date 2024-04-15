@@ -7,18 +7,18 @@ import MobileMenu from "./MobileMenu";
 export const MenuLinks = [
   {
     id: 1,
-    name: "About",
-    link: "/#about",
-  },
-  {
-    id: 2,
     name: "Services",
     link: "/#services",
   },
   {
+    id: 2,
+    name: "Testimonials",
+    link: "/#testimonials",
+  },
+  {
     id: 3,
-    name: "Projects",
-    link: "/#projects",
+    name: "Blogs",
+    link: "/#blogs",
   },
 ];
 
@@ -45,7 +45,7 @@ const Navbar = () => {
             </div>
 
             {/* desktop nav section */}
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <ul className="flex items-center gap-8">
                 {MenuLinks.map((link) => (
                   <li key={link.id} className="py-4">
@@ -65,7 +65,7 @@ const Navbar = () => {
             </div>
 
             {/* mobile menu button */}
-            <div className="flex items-center gap-4 md:hidden">
+            <div className="flex items-center gap-4 lg:hidden h-12">
               <DarkMode />
               {showMenu ? (
                 <HiMenuAlt1
@@ -83,7 +83,7 @@ const Navbar = () => {
         </div>
 
         {/* mobile navlinks item */}
-        <MobileMenu showMenu={showMenu} />
+        <MobileMenu showMenu={showMenu} onClick={toggleMenu} />
       </nav>
     </>
   );
