@@ -13,7 +13,7 @@ const MobileMenu = ({ showMenu, onClick }: Props) => {
     <div
       className={`${
         showMenu ? "left-0" : "left-[-100%]"
-      } fixed bottom-0 top-0 w-[75%] transition-all duration-200 shadow-md pt-16 px-8 bg-white dark:bg-gray-900 z-50`}
+      } fixed bottom-0 top-0 w-[75%] transition-all duration-200 shadow-md pt-16 px-8 bg-white dark:bg-gray-900 z-50 lg:hidden`}
     >
       <div className="card">
         {/* user section */}

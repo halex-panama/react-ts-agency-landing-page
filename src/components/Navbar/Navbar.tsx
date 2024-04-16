@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../../assets/website/logo.svg";
 import DarkMode from "./DarkMode";
 import { HiMenuAlt1, HiMenuAlt3 } from "react-icons/hi";
@@ -28,6 +28,23 @@ const Navbar = () => {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+
+  const handleWindowResize = () => {
+    const width = window.innerWidth;
+
+    if (width > 1024) {
+      setShowMenu(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+
+  }, []);
 
   return (
     <>
@@ -84,6 +101,13 @@ const Navbar = () => {
 
         {/* mobile navlinks item */}
         <MobileMenu showMenu={showMenu} onClick={toggleMenu} />
+
+        {showMenu && (
+          <div
+            onClick={() => setShowMenu(false)}
+            className="overlay top-0 bottom-0 left-0 right-0 bg-black/50 absolute z-30 lg:hidden"
+          />
+        )}
       </nav>
     </>
   );
