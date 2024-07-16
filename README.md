@@ -33,4 +33,4 @@ Start the project on your local machine
 
 ## Screenshots
 
-![App Screenshot](https://i.ibb.co/fdy5WQM/landing-page-thumb.png)
+![App Screenshot](https://i.ibb.co/t4QjLnf/Digital-Agency.png)
